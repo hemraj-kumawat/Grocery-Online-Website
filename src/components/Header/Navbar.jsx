@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const { cartCount} = useContext(CartContext);
+  const { cartCount } = useContext(CartContext);
 
   const menu = [
     { name: "Home", path: "/" },
@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <header>
-      <nav className="fixed lift-0 right-0 w-full h-14 md:h-16 bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-between px-6 md:px-10 z-50">
+      <nav className="fixed lift-0 top-0 right-0 w-full h-14 md:h-16 bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-between px-6 md:px-10 z-50">
         {/* Logo */}
         <Link
           to="/"
