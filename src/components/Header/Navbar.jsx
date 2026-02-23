@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <header>
-      <nav className="fixed top-0 left-0 w-full h-14 md:h-16 bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-between px-6 md:px-10 z-50">
+      <nav className="fixed lift-0 right-0 w-full h-14 md:h-16 bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-between px-6 md:px-10 z-50">
         {/* Logo */}
         <Link
           to="/"
@@ -97,7 +97,7 @@ function Navbar() {
       />
 
       <ul
-        className={`fixed top-16 right-0 w-[75%] max-w-[320px] h-[calc(100vh-4rem)] bg-white shadow-xl z-50 flex flex-col gap-y-8 px-8 py-10 text-zinc-700 font-semibold text-lg transform transition-transform duration-300 ${
+        className={`fixed top-16 right-0 w-[75%] max-w-[320px] h-[95vh] bg-white shadow-xl z-50 flex flex-col gap-y-8 px-8 py-10 text-zinc-700 font-semibold text-lg transform transition-transform duration-300 ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -114,7 +114,7 @@ function Navbar() {
         ))}
 
         {/* Search Mobile */}
-        <li className="mt-auto flex border-2 border-orange-400 px-3 py-1 rounded-full">
+        <li className="mt-auto mb-10 flex border-2 border-orange-400 px-3 py-2 rounded-full">
           <input
             type="text"
             placeholder="Search"
