@@ -5,6 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { TbMenu2, TbMenu3 } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
+
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const { cartCount } = useContext(CartContext);
@@ -19,11 +20,13 @@ function Navbar() {
   // body scroll lock
   useEffect(() => {
     document.body.style.overflow = showMenu ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
   }, [showMenu]);
 
   return (
     <header>
-      <nav className="fixed lift-0 top-0 right-0 w-full h-14 md:h-16 bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-between px-6 md:px-10 z-50">
+      {/* NAVBAR */}
+      <nav className="fixed left-0 top-0 w-full h-14 md:h-16 bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-between px-6 md:px-10 z-50">
         {/* Logo */}
         <Link
           to="/"
@@ -37,7 +40,7 @@ function Navbar() {
           {menu.map((item) => (
             <li
               key={item.name}
-              className="relative group cursor-pointer transform hover:scale-110  hover:text-orange-500 transition-all duration-300"
+              className="cursor-pointer hover:scale-110 hover:text-orange-500 transition-all duration-300"
             >
               <Link to={item.path}>{item.name}</Link>
             </li>
@@ -53,25 +56,17 @@ function Navbar() {
               placeholder="Search"
               className="focus:outline-none px-2 w-36 font-medium"
             />
-            <button
-              aria-label="Search"
-              className="bg-orange-400 p-2 rounded-full text-white"
-            >
+            <button className="bg-orange-400 p-2 rounded-full text-white">
               <IoSearch />
             </button>
           </div>
 
           {/* Icons */}
-          <button
-            aria-label="Wishlist"
-            className="text-zinc-800 text-3xl hover:text-orange-500 transition-all duration-300"
-          >
+          <button className="text-zinc-800 text-3xl hover:text-orange-500 transition">
             <GoHeartFill />
           </button>
-          <button
-            aria-label="Cart"
-            className="text-zinc-800 text-3xl hover:text-orange-500 transition-all duration-300 relative"
-          >
+
+          <button className="relative text-zinc-800 text-3xl hover:text-orange-500 transition">
             <HiShoppingBag />
             <span className="absolute -top-1 -right-2 text-xs bg-orange-500 text-white rounded-full px-1">
               {cartCount}
@@ -88,7 +83,7 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 backdrop-blur-sm z-40 transition-opacity ${
           showMenu ? "opacity-100 visible" : "opacity-0 invisible"
@@ -96,8 +91,9 @@ function Navbar() {
         onClick={() => setShowMenu(false)}
       />
 
+      {/* Mobile Menu */}
       <ul
-        className={`fixed top-16 right-0 w-[75%] max-w-[320px] h-[95vh] bg-white shadow-xl z-50 flex flex-col gap-y-8 px-8 py-10 text-zinc-700 font-semibold text-lg transform transition-transform duration-300 ${
+        className={`fixed top-14 right-0 w-[75%] max-w-[320px] h-[calc(100vh-3.5rem)] bg-white shadow-xl z-50 flex flex-col gap-y-8 px-8 py-10 text-zinc-700 font-semibold text-lg transform transition-transform duration-300 ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -114,7 +110,7 @@ function Navbar() {
         ))}
 
         {/* Search Mobile */}
-        <li className="mt-auto mb-10 flex border-2 border-orange-400 px-3 py-2 rounded-full">
+        <li className="mt-auto flex border-2 border-orange-400 px-3 py-2 rounded-full">
           <input
             type="text"
             placeholder="Search"

@@ -4,7 +4,7 @@ function Footer() {
   return (
     // Footer Section
     <footer className="bg-zinc-200">
-      <div className="mx-10 grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-6 py-10 border-b-2 border-zinc-400">
+      <div className="px-10 grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-6 py-10 border-b-2 border-zinc-400">
         {/* Logo */}
         <div className="text-center">
           <a
