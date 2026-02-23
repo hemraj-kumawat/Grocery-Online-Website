@@ -1,5 +1,6 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+
 import Home from "./pages/HomePage";
 import FruitsAndVeggies from "./pages/FruitsAndVeggiesPage";
 import MeatAndSeaFood from "./pages/MeatAndSeaFoodPage";
@@ -8,13 +9,13 @@ import AllProducts from "./pages/AllProductsPage";
 import PageLayout from "./pages/PageLayout";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <PageLayout />,
       children: [
         {
-          index:  true ,
+          index: true,
           element: <Home />,
         },
         {
