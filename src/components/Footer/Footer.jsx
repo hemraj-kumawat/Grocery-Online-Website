@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
 
           {/* Logo & About */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <a
               href="#"
               className="text-zinc-700 font-bold text-2xl md:text-3xl tracking-wide"
@@ -22,7 +22,7 @@ function Footer() {
           </div>
 
           {/* Company */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="text-zinc-700 text-xl font-bold">Company</h4>
             <ul className="mt-4 space-y-3">
               {["About", "Process", "Contact"].map((item) => (
@@ -39,7 +39,7 @@ function Footer() {
           </div>
 
           {/* Support */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="text-zinc-700 text-xl font-bold">Support</h4>
             <ul className="mt-4 space-y-3">
               {["Support Center", "Feedback"].map((item) => (
@@ -56,7 +56,7 @@ function Footer() {
           </div>
 
           {/* Stay Connected */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="text-zinc-700 text-xl font-bold">
               Stay Connected
             </h4>

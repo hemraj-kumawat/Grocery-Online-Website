@@ -110,7 +110,7 @@ function Navbar() {
         ))}
 
         {/* Search Mobile */}
-        <li className="mt-auto flex border-2 border-orange-400 px-3 py-2 rounded-full">
+        <li className="mb-auto flex border-2 border-orange-400 px-3 py-2 rounded-full">
           <input
             type="text"
             placeholder="Search"
