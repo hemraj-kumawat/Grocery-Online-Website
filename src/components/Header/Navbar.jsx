@@ -12,7 +12,7 @@ function Navbar() {
 
   const menu = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/" },
+    { name: "About", path: "/About" },
     { name: "Process", path: "/" },
     { name: "Contact", path: "/" },
   ];

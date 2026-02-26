@@ -1,4 +1,5 @@
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -23,20 +24,34 @@ function Footer() {
 
           {/* Company */}
           <div className="text-center">
-            <h4 className="text-zinc-700 text-xl font-bold">Company</h4>
-            <ul className="mt-4 space-y-3">
-              {["About", "Process", "Contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-zinc-600 hover:text-orange-500 transition font-semibold"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h4 className="text-zinc-700 text-2xl font-bold">Company</h4>
+          <ul>
+            <li>
+              <Link
+                to="/About"
+                className="inline-block text-zinc-600 hover:text-orange-500 transition-colors duration-300 mt-4 font-semibold"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="inline-block text-zinc-600 hover:text-orange-500 transition-colors duration-300 mt-4 font-semibold"
+              >
+                Process
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="inline-block text-zinc-600 hover:text-orange-500 transition-colors duration-300 mt-4 font-semibold"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
 
           {/* Support */}
           <div className="text-center">

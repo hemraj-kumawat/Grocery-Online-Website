@@ -7,6 +7,7 @@ import MeatAndSeaFood from "./pages/MeatAndSeaFoodPage";
 import DairyAndEggs from "./pages/DairyAndEggsPage";
 import AllProducts from "./pages/AllProductsPage";
 import PageLayout from "./pages/PageLayout";
+import About from "./pages/AboutPage";
 
 function App() {
   const router = createHashRouter([
@@ -33,6 +34,10 @@ function App() {
         {
           path: "AllProducts",
           element: <AllProducts />,
+        },
+        {
+          path: "About",
+          element: <About />,
         },
       ],
     },
