@@ -10,7 +10,7 @@ function ChooseUs() {
     <section>
       <CategoryHeading highlight={"Why"} heading={"Choose Us"} />
       <div className="grid md:grid-cols-4 grid-cols-1 gap-3 px-10 py-10 ">
-        <div className="flex flex-col gap-3 mt-8  shadow shadow-zinc-300 rounded-2xl p-5 group hover:scale-105 hover:shadow-xl transition-all duration-300">
+        <div className="flex flex-col gap-3 mt-8 shadow shadow-zinc-300 rounded-2xl p-5 group hover:scale-105 hover:shadow-xl transition-all duration-300">
           <div className="flex gap-3">
             <SiCodefresh className="text-orange-500 text-4xl" />
             <h3 className="text-3xl text-zinc-700 font-bold">
