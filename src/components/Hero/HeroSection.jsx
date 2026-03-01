@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     // hero section
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-10 gap-10 py-10 min-h-screen pt-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-10 gap-10 py-10 pt-24">
         {/* content section */}
         <div>
           <span className="bg-orange-100 text-orange-500 text-lg px-5 py-2 rounded-full font-semibold inline-block">
